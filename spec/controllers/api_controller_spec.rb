@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe ApiController, type: :controller do
+RSpec.describe API::FightersController, type: :controller do
 
   describe 'GET index' do
 
