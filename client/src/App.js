@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import{ BrowserRouter as Router, NavLink, Route } from 'react-router-dom';
+import FightersPage from './containers/fighters/FightersPage';
 import logo from './logo.jpg';
 import './App.css';
 
@@ -9,9 +11,13 @@ class App extends Component {
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
         </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to exit.
-        </p>
+        <div>
+          <Router>
+            <div>
+              <Route path='/fighters' component={FightersPage} />
+            </div>
+          </Router>
+        </div>
       </div>
     );
   }
