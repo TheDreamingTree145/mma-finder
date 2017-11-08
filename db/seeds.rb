@@ -5,3 +5,5 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+fighter_1 = Fighter.create(name: "Jon Jones", age: 28, weight_class: "Light Heavyweight", hometown: "Buffalo")
