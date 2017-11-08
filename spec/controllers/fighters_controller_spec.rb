@@ -6,7 +6,7 @@ RSpec.describe API::FightersController, type: :controller do
 
     it 'has an index page' do
       get :index
-
+      binding.pry
       expect(response.status).to eq(200)
     end
   end

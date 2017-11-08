@@ -1,6 +1,7 @@
 class API::FightersController < ApplicationController
 
   def index
-    render :json => []
+    fighters = Fighter.all
+    render :json => fighters, status: 200
   end
 end
