@@ -5,6 +5,7 @@ class CreateFighters < ActiveRecord::Migration[5.1]
       t.integer :age
       t.string :weight_class
       t.string :hometown
+      t.integer :gym_id
 
       t.timestamps
     end
