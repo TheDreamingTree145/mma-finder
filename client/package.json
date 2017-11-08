@@ -2,6 +2,7 @@
 
   "name": "client",
   "version": "0.1.0",
+  "proxy": "http://localhost:3001",
   "private": true,
   "devDependencies": {
     "jsdom": "^9.9.1",
