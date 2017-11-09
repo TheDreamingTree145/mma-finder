@@ -5,9 +5,10 @@ import { Route, Switch } from 'react-router-dom';
 class FightersPage extends Component {
 
   componentDidMount() {
+    debugger;
     fetch('/api/fighters')
       .then(response => response.json())
-      .then(console.log(fighters => fighters))
+      .then((fighters => { this.setState({ fighters: fighters}) }))
   }
 
   render() {

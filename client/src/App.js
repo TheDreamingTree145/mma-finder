@@ -26,7 +26,7 @@ class App extends Component {
                   <h3>The largest collection of MMA fighters, gyms, and fights ever!</h3>
                     <p>Click a link to get started</p>
                 </div>} />
-              <Route path="/figters" component={FightersPage} />
+              <Route path="/fighters" component={FightersPage} />
             </div>
           </Router>
         </div>
