@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Route, Switch } from 'react-router-dom';
-import {fetchFigherts} from '.../actions/fightActions'
+import * as actions from '../actions/fighterActions.js'
+import {fetchFighters} from '../actions/fighterActions'
+
 
 class FightersPage extends Component {
 
@@ -24,4 +26,10 @@ class FightersPage extends Component {
   }
 }
 
-export default FightersPage;
+function mapStateToProps(state, ownProps) {
+  return {
+    fighters: state.fighters
+  }
+}
+
+export default connect(mapStateToProps)(FightersPage);
