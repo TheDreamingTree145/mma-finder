@@ -1,5 +1,3 @@
-import fetch from 'isomorphic-fetch';
-
 export function fetchFighters() {
   return function(dispatch) {
     dispatch({type: 'LOADING_FIGHTERS'})

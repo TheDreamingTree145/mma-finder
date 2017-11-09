@@ -12,7 +12,7 @@ const store = createStore(fightersReducer, window.__REDUX_DEVTOOLS_EXTENSION__ &
 
 ReactDOM.render(
   <Provider store={store}>
-    <App store={store}/>
+    <App store={store} />
   </Provider>,
   document.getElementById('root')
 );

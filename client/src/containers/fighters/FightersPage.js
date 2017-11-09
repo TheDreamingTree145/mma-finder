@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Route, Switch } from 'react-router-dom';
-import * as actions from '../actions/fighterActions.js'
-import {fetchFighters} from '../actions/fighterActions'
+
 
 
 class FightersPage extends Component {
+
 
   componentDidMount() {
 
@@ -16,17 +16,15 @@ class FightersPage extends Component {
 
     return (
       <div>
-      hhh
+        {/* FightersList fighters={}} */}
         <Switch>
-          <Route path={`${match.url}`}  />
 
         </Switch>
       </div>
     )
   }
 }
-
-function mapStateToProps(state, ownProps) {
+const mapStateToProps = (state) => {
   return {
     fighters: state.fighters
   }
