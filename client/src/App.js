@@ -11,10 +11,22 @@ class App extends Component {
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
         </header>
-        <div>
+      <div>
+      <div>
+        <h2>Welcome Page</h2>
+      </div>
           <Router>
             <div>
-              <Route path='/fighters' component={Fighters} />
+              <div style={{ borderBottom: '2px solid black', paddingBottom: '10px', marginBottom: '12px' }}>
+                <NavLink style={{ marginRight: '10px' }} to="/fighters">Fighter Index</NavLink>
+                <NavLink style={{ marginRight: '10px' }} to="/pets/new">Add A Pet</NavLink>
+              </div>
+              <Route exact path="/" render={() =>
+                <div>
+                  <h3>The largest collection of MMA fighters, gyms, and fights ever!</h3>
+                    <p>Click a link to get started</p>
+                </div>} />
+              <Route path="/figters" component={FightersPage} />
             </div>
           </Router>
         </div>
