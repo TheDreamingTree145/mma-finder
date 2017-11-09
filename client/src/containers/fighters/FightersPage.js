@@ -1,14 +1,12 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Route, Switch } from 'react-router-dom';
+import {fetchFigherts} from '.../actions/fightActions'
 
 class FightersPage extends Component {
 
   componentDidMount() {
-    debugger;
-    fetch('/api/fighters')
-      .then(response => response.json())
-      .then((fighters => { this.setState({ fighters: fighters}) }))
+
   }
 
   render() {
@@ -16,8 +14,10 @@ class FightersPage extends Component {
 
     return (
       <div>
+      hhh
         <Switch>
-          <Route path={`${match.url}`} />
+          <Route path={`${match.url}`}  />
+
         </Switch>
       </div>
     )
