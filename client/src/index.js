@@ -8,7 +8,7 @@ import fightersReducer from './reducers/fightersReducer';
 import App from './App';
 import registerServiceWorker from './registerServiceWorker';
 
-const store = createStore(fightersReducer, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
+const store = createStore(window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
 
 ReactDOM.render(
   <Provider store={store}>
