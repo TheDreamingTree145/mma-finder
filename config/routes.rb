@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   root to: 'site#index'
 
   namespace :api do
-    resources :fighters, :only => [:index]
+    resources :fighters, :only => [:index, :new, :create, :edit, :update]
+    resources :gyms, :only => [:index, :new, :create, :edit, :update]
   end
 end
