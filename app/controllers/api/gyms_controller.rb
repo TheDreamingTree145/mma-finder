@@ -6,17 +6,17 @@ class API::GymsController < ApplicationController
   end
 
   def create
-    @gym = Fighter.create(gym_params)
+    @gym = Gym.create(gym_params)
     render :json => @gym
   end
 
   def show
-    @gym = Fighter.find(params[:id])
+    @gym = Gym.find(params[:id])
     render :json => @gym
   end
 
   def update
-    @gym = Figher.find(params[:id])
+    @gym = Gym.find(params[:id])
     @gym.update(gym_params)
     render :json => @gym
   end
