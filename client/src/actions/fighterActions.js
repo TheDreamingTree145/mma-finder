@@ -5,7 +5,7 @@ export function fetchFighters() {
     dispatch({type: 'LOADING_FIGHTERS'})
     return fetch('http://localhost:3001/api/fighters')
       .then(response => {
-        return response.json()
+        return response.json();
       }).then(responseJson => {
         dispatch({type: 'FETCH_FIGHTERS', payload: responseJson.fighters})
     })

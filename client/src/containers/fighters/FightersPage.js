@@ -4,7 +4,7 @@ import { Route, Switch } from 'react-router-dom';
 import {bindActionCreators} from 'redux';
 import {fetchFighters} from '../../actions/fighterActions';
 import * as actions from '../../actions/fighterActions.js';
-
+import FighterForm from '../../components/fighters/FighterForm';
 
 
 class FightersPage extends Component {
@@ -21,7 +21,7 @@ class FightersPage extends Component {
       <div>
         {/* FightersList fighters={}} */}
         <Switch>
-
+          <Route path={`${match.url}/new`} component={FighterForm} />
         </Switch>
       </div>
     )
