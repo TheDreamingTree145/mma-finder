@@ -38,6 +38,13 @@ class FighterForm extends Component {
         }
       })
     })
+    this.setState({
+      name: '',
+      age: '',
+      weight_class: '',
+      hometown: '',
+      gym_id: '',
+    })
   }
 
   render() {
@@ -46,6 +53,7 @@ class FighterForm extends Component {
       <div className="fightersForm">
         <h1>New Fighter Form</h1>
           <form onSubmit={this.handleOnSubmit}>
+
             <label>Name: </label>
             <input
               type='text'
@@ -53,6 +61,7 @@ class FighterForm extends Component {
               onChange={this.handleOnChange}
               value={this.state.name}
              /><br /><br />
+
             <label>Age: </label>
             <input
               type='number'
@@ -62,12 +71,12 @@ class FighterForm extends Component {
               onChange={this.handleOnChange}
               value={this.state.age}
             /><br /><br />
+
             <label>Weight Class </label>
             <select
               name="weight_class"
               onChange={this.handleOnChange}
-              value={this.state.weight_class}
-            >
+              value={this.state.weight_class}>
               <option value="Flyweight">Flyweight</option>
               <option value="Bantamweight">Bantamweight</option>
               <option value="Featherweight">Featherweight</option>
@@ -77,6 +86,7 @@ class FighterForm extends Component {
               <option value="Light Heavyweight">Light Heavyweight</option>
               <option value="Heavyweight">Heavyweight</option>
             </select><br /><br />
+
             <label>Hometown </label>
             <input
               type="text"
@@ -84,6 +94,7 @@ class FighterForm extends Component {
               onChange={this.handleOnChange}
               value={this.state.hometown}
             /><br /><br />
+
             <input type="submit" value="Submit New Fighter" />
           </form>
       </div>

@@ -11,7 +11,7 @@ class FightersPage extends Component {
 
 
   componentDidMount() {
-  
+    this.props.actions.fetchFighters()
   }
 
   render() {

@@ -7,7 +7,7 @@ export function fetchFighters() {
       .then(response => {
         return response.json();
       }).then(responseJson => {
-        dispatch({type: 'FETCH_FIGHTERS', payload: responseJson.fighters})
+        dispatch({type: 'FETCH_FIGHTERS', payload: responseJson})
     })
   }
 }
