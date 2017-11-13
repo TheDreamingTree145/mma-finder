@@ -19,7 +19,7 @@ class App extends Component {
             <div>
               <div style={{ borderBottom: '2px solid black', paddingBottom: '10px', marginBottom: '12px' }}>
                 <NavLink style={{ marginRight: '10px' }} to="/fighters">Fighter Index</NavLink>
-                <NavLink style={{ marginRight: '10px' }} to="/pets/new">Add A Pet</NavLink>
+                <NavLink style={{ marginRight: '10px' }} to="/fighters/new">Add a New Fighter</NavLink>
               </div>
               <Route exact path="/" render={() =>
                 <div>
