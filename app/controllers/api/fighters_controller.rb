@@ -1,6 +1,7 @@
 class API::FightersController < ApplicationController
 
   def index
+    binding.pry
     if find_gym
       fighters = @gym.fighters
     else

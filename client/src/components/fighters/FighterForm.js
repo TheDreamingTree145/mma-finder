@@ -22,6 +22,7 @@ class FighterForm extends Component {
 
   handleOnSubmit = (event) => {
     event.preventDefault();
+    const {history} = this.props
     fetch('http://localhost:3001/api/fighters', {
       method: 'post',
       headers: {
@@ -38,6 +39,7 @@ class FighterForm extends Component {
         }
       })
     })
+
     this.setState({
       name: '',
       age: '',
@@ -45,6 +47,7 @@ class FighterForm extends Component {
       hometown: '',
       gym_id: '',
     })
+    history.push('/fighters')
   }
 
   render() {

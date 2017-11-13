@@ -5,6 +5,7 @@ import {bindActionCreators} from 'redux';
 import {fetchFighters} from '../../actions/fighterActions';
 import * as actions from '../../actions/fighterActions.js';
 import FighterForm from '../../components/fighters/FighterForm';
+import FightersList from '../../components/fighters/FightersList';
 
 
 class FightersPage extends Component {
@@ -18,7 +19,7 @@ class FightersPage extends Component {
     const { match, fighters } = this.props;
     return (
       <div>
-        {/* FightersList fighters={}} */}
+        <FightersList fighters={this.props.fighters} />
         <Switch>
           <Route path={`${match.url}/new`} component={FighterForm} />
         </Switch>
