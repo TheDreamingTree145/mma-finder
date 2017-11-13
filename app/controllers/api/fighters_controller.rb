@@ -10,6 +10,7 @@ class API::FightersController < ApplicationController
   end
 
   def create
+    binding.pry
     @fighter = Fighter.create(fighter_params)
     render :json => @fighters
   end
@@ -20,7 +21,7 @@ class API::FightersController < ApplicationController
   end
 
   def update
-    @fighter = Figher.find(params[:id])
+    @fighter = Fighter.find(params[:id])
     @fighter.update(fighter_params)
     render :json => @fighter
   end

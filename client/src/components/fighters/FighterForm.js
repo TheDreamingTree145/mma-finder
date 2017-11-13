@@ -20,12 +20,32 @@ class FighterForm extends Component {
     })
   }
 
+  handleOnSubmit = (event) => {
+    event.preventDefault();
+    fetch('http://localhost:3001/api/fighters', {
+      method: 'post',
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        fighter: {
+          name: this.state.name,
+          age: this.state.age,
+          weight_class: this.state.weight_class,
+          hometown: this.state.hometown,
+          gym_id: 1
+        }
+      })
+    })
+  }
+
   render() {
 
     return (
       <div className="fightersForm">
         <h1>New Fighter Form</h1>
-          <form>
+          <form onSubmit={this.handleOnSubmit}>
             <label>Name: </label>
             <input
               type='text'
