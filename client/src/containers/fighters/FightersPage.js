@@ -16,7 +16,6 @@ class FightersPage extends Component {
 
   render() {
     const { match, fighters } = this.props;
-
     return (
       <div>
         {/* FightersList fighters={}} */}
