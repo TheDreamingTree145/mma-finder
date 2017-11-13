@@ -1,6 +1,4 @@
-export default function fightersReducer(state = {
-  loading: false, fighters: []
-}, action) {
+export default function fightersReducer(state = {loading: false, fighters: []}, action) {
   switch (action.type) {
     case 'FETCH_FIGHTERS':
       return {loading: false, fighters: action.payload}

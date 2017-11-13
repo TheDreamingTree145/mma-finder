@@ -1,11 +1,13 @@
+import fetch from 'isomorphic-fetch';
+
 export function fetchFighters() {
   return function(dispatch) {
     dispatch({type: 'LOADING_FIGHTERS'})
-    return fetch('/api/fighters')
+    return fetch('http://localhost:3001/api/fighters')
       .then(response => {
-        response.json()
-      }).then(fighters => {
-        dispatch({type: 'FETCH_FIGHTERS', payload: fighters})
+        return response.json()
+      }).then(responseJson => {
+        dispatch({type: 'FETCH_FIGHTERS', payload: responseJson.fighters})
     })
   }
 }
