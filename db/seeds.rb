@@ -7,3 +7,5 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 fighter_1 = Fighter.create(name: "Jon Jones", age: 28, weight_class: "Light Heavyweight", hometown: "Buffalo")
+
+gym_1 = Gym.create(name: "American Kickboxing Academy", location: "Coconut Creek, FL", owner: "Dave Camarillo")

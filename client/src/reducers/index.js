@@ -3,7 +3,7 @@ import fightersReducer from './fightersReducer';
 import gymsReducer from './gymsReducer';
 
 const rootReducer = combineReducers({
-  fighters: fightersReducer
+  fighters: fightersReducer,
   gyms: gymsReducer
 })
 
