@@ -13,6 +13,13 @@ class FighterForm extends Component {
     }
   }
 
+  handleOnChange = (event) => {
+    const { value, name } = event.target
+     this.setState({
+       [name]: value
+    })
+  }
+
   render() {
 
     return (
@@ -20,11 +27,27 @@ class FighterForm extends Component {
         <h1>New Fighter Form</h1>
           <form>
             <label>Name: </label>
-            <input type='text' id="fighterName" /><br /><br />
+            <input
+              type='text'
+              name="name"
+              onChange={this.handleOnChange}
+              value={this.state.name}
+             /><br /><br />
             <label>Age: </label>
-            <input type='number' min='18' max='99' /><br /><br />
+            <input
+              type='number'
+              name="age"
+              min='18'
+              max='99'
+              onChange={this.handleOnChange}
+              value={this.state.age}
+            /><br /><br />
             <label>Weight Class </label>
-            <select>
+            <select
+              name="weight_class"
+              onChange={this.handleOnChange}
+              value={this.state.weight_class}
+            >
               <option value="Flyweight">Flyweight</option>
               <option value="Bantamweight">Bantamweight</option>
               <option value="Featherweight">Featherweight</option>
@@ -35,7 +58,12 @@ class FighterForm extends Component {
               <option value="Heavyweight">Heavyweight</option>
             </select><br /><br />
             <label>Hometown </label>
-            <input type="text" id="fighterHometown" /><br /><br />
+            <input
+              type="text"
+              name="hometown"
+              onChange={this.handleOnChange}
+              value={this.state.hometown}
+            /><br /><br />
             <input type="submit" value="Submit New Fighter" />
           </form>
       </div>
