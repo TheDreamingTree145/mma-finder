@@ -1,13 +1,13 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const FightersList = (props) => {
   function listFighters() {
-    debugger;
     return props.fighters.fighters.map(fighter => {
       return (
         <div>
           <ul>
-            <li>{fighter.name}</li>
+            <Link style={{ marginRight: '12px' }} key={fighter.id} to={`/fighters/${fighter.id}`}>{fighter.name}</Link>
           </ul>
         </div>
       )

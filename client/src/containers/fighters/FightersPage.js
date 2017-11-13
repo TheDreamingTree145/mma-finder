@@ -21,7 +21,7 @@ class FightersPage extends Component {
       <div>
         <FightersList fighters={this.props.fighters} />
         <Switch>
-          <Route path={`${match.url}/new`} component={FighterForm} />
+          <Route exact path={`${match.url}/new`} component={FighterForm} />
         </Switch>
       </div>
     )

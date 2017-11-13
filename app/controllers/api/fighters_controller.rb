@@ -1,7 +1,6 @@
 class API::FightersController < ApplicationController
 
   def index
-    binding.pry
     if find_gym
       fighters = @gym.fighters
     else
@@ -11,9 +10,8 @@ class API::FightersController < ApplicationController
   end
 
   def create
-    binding.pry
     @fighter = Fighter.create(fighter_params)
-    render :json => @fighters
+    render :json => @fighters, status: 201
   end
 
   def show

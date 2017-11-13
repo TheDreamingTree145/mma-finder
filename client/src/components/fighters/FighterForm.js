@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+import {postFighters} from '../../actions/fighterActions'
+import * as actions from '../../actions/fighterActions'
+import {bindActionCreators} from 'redux';
 
 class FighterForm extends Component {
   constructor(props) {
@@ -23,35 +26,11 @@ class FighterForm extends Component {
   handleOnSubmit = (event) => {
     event.preventDefault();
     const {history} = this.props
-    fetch('http://localhost:3001/api/fighters', {
-      method: 'post',
-      headers: {
-        'Accept': 'application/json',
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({
-        fighter: {
-          name: this.state.name,
-          age: this.state.age,
-          weight_class: this.state.weight_class,
-          hometown: this.state.hometown,
-          gym_id: 1
-        }
-      })
-    })
-
-    this.setState({
-      name: '',
-      age: '',
-      weight_class: '',
-      hometown: '',
-      gym_id: '',
-    })
-    history.push('/fighters')
+    debugger;
+    this.props.actions.postFighters()
   }
 
   render() {
-
     return (
       <div className="fightersForm">
         <h1>New Fighter Form</h1>
@@ -103,6 +82,10 @@ class FighterForm extends Component {
       </div>
     )
   }
+}
+
+const mapDispatchToProps = (dispatch) => {
+  return {actions: bindActionCreators(actions, dispatch)}
 }
 
 export default FighterForm;
