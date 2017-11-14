@@ -1,11 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
+import FighterDetails from './FighterDetails'
 
 const FighterShow = ({fighter}) => {
   return (
     <div>
-      <h1>{fighter.name}</h1>
+      <FighterDetails fighter={fighter} />
     </div>
   )
 }
@@ -16,6 +17,7 @@ const mapStateToProps = (state, ownProps) => {
     return { fighter }
   } else {
     return { fighter: {} }
+
   }
 }
 
