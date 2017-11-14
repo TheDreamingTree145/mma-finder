@@ -6,6 +6,7 @@ import {fetchFighters} from '../../actions/fighterActions';
 import * as actions from '../../actions/fighterActions.js';
 import FighterForm from '../../components/fighters/FighterForm';
 import FightersList from '../../components/fighters/FightersList';
+import FighterShow from '../../components/fighters/FighterShow';
 
 
 class FightersPage extends Component {
@@ -22,6 +23,7 @@ class FightersPage extends Component {
         <FightersList fighters={this.props.fighters} />
         <Switch>
           <Route exact path={`${match.url}/new`} component={FighterForm} />
+          <Route exact path={`${match.url}/:fighterId`} component={FighterShow} />
         </Switch>
       </div>
     )
