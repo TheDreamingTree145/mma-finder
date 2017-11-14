@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import {connect} from 'react-redux';
 import {postFighters} from '../../actions/fighterActions'
 import * as actions from '../../actions/fighterActions'
 import {bindActionCreators} from 'redux';
@@ -26,8 +27,8 @@ class FighterForm extends Component {
   handleOnSubmit = (event) => {
     event.preventDefault();
     const {history} = this.props
-    debugger;
-    this.props.actions.postFighters()
+    this.props.actions.postFighters(this.state)
+    history.push('/fighters')
   }
 
   render() {
@@ -88,4 +89,4 @@ const mapDispatchToProps = (dispatch) => {
   return {actions: bindActionCreators(actions, dispatch)}
 }
 
-export default FighterForm;
+export default connect(null, mapDispatchToProps)(FighterForm);
