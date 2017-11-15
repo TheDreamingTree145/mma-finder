@@ -1,11 +1,22 @@
 import React, { Component } from 'react';
 import{ BrowserRouter as Router, NavLink, Route } from 'react-router-dom';
+import { connect } from 'react-redux';
+import {bindActionCreators} from 'redux';
 import FightersPage from './containers/fighters/FightersPage';
 import GymsPage from './containers/gyms/GymsPage';
+import {fetchGyms} from './actions/gymActions';
+import * as actions from './actions/gymActions';
 import logo from './logo.jpg';
 import './App.css';
 
+
+
 class App extends Component {
+
+  componentDidMount() {
+    this.props.actions.fetchGyms();
+  }
+
   render() {
     return (
       <div className="App">
@@ -38,4 +49,8 @@ class App extends Component {
   }
 }
 
-export default App;
+const mapDispatchToProps = (dispatch) => {
+  return {actions: bindActionCreators(actions, dispatch)}
+}
+
+export default connect(null, mapDispatchToProps)(App);

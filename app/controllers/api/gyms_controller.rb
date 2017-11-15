@@ -3,7 +3,7 @@ class API::GymsController < ApplicationController
 
   def index
     gyms = Gym.all
-    render :json => gyms
+    render :json => gyms, status: 200
   end
 
   def create
@@ -27,7 +27,5 @@ class API::GymsController < ApplicationController
     def gym_params
       params.require(:fighter).permit(:name, :location, :owner)
     end
-
-end
 
 end

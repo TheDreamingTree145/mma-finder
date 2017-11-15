@@ -11,4 +11,10 @@ class GymsPage extends Component {
   }
 }
 
-export default GymsPage;
+const mapStateToProps = (state) => {
+  return {
+    gyms: state.gyms
+  }
+}
+
+export default connect(mapStateToProps)(GymsPage);
