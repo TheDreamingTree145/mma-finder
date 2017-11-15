@@ -6,7 +6,7 @@ import FighterDetails from './FighterDetails'
 const FighterShow = ({fighter}) => {
   return (
     <div>
-      <h1>{fighter.name}</h1>
+      <FighterDetails fighter={fighter} />
     </div>
   )
 }
