@@ -6,7 +6,7 @@ import FighterDetails from './FighterDetails'
 const FighterShow = ({fighter}) => {
   return (
     <div>
-      <FighterDetails fighter={fighter} />
+      <h1>{fighter.name}</h1>
     </div>
   )
 }
@@ -17,7 +17,6 @@ const mapStateToProps = (state, ownProps) => {
     return { fighter }
   } else {
     return { fighter: {} }
-
   }
 }
 

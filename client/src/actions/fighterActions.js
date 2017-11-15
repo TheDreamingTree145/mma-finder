@@ -8,6 +8,8 @@ export function fetchFighters() {
         return response.json();
       }).then(responseJson => {
         dispatch({type: 'FETCH_FIGHTERS', payload: responseJson})
+    }).catch(e => {
+      console.log(e)
     })
   }
 }
@@ -30,6 +32,10 @@ export function postFighters(state) {
           gym_id: 1
         }
       })
-    }).then(response => console.log(response.url, response))
+    }).then(response  => {
+      return response.json()
+    }).then(responseJson => {
+      dispatch({type: 'ADD_FIGHTER', payload: responseJson})
+    })
   }
 }

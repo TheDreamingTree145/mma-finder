@@ -11,7 +11,6 @@ import FighterShow from '../../components/fighters/FighterShow';
 
 class FightersPage extends Component {
 
-
   componentDidMount() {
     this.props.actions.fetchFighters()
   }
@@ -20,14 +19,16 @@ class FightersPage extends Component {
     const { match, fighters } = this.props;
     return (
       <div>
+        <FightersList fighters={this.props.fighters} />
         <Switch>
           <Route exact path={`${match.url}/new`} component={FighterForm} />
-          <Route exact path={`${match.url}/:fighterId`} component={FighterShow} />
+          <Route path={`${match.url}/:fighterId`} component={FighterShow} />
         </Switch>
       </div>
     )
   }
 }
+
 const mapStateToProps = (state) => {
   return {
     fighters: state.fighters

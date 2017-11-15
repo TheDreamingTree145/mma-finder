@@ -11,7 +11,7 @@ class API::FightersController < ApplicationController
 
   def create
     @fighter = Fighter.create(fighter_params)
-    render :json => @fighters, status: 201
+    render :json => @fighter, status: 201
   end
 
   def show
