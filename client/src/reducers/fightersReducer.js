@@ -5,8 +5,7 @@ export default function fightersReducer(state = {loading: false, fighters: []}, 
     case 'LOADING_FIGHTERS':
       return Object.assign({}, state, {loading: true})
     case 'ADD_FIGHTER':
-      debugger;
-      return state
+      return Object.assign({}, state, state.fighters.concat(action.payload))
     default:
       return state
   }
