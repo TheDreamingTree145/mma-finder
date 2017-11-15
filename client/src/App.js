@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import{ BrowserRouter as Router, NavLink, Route } from 'react-router-dom';
 import FightersPage from './containers/fighters/FightersPage';
+import GymsPage from './containers/gyms/GymsPage';
 import logo from './logo.jpg';
 import './App.css';
 
@@ -20,6 +21,7 @@ class App extends Component {
               <div style={{ borderBottom: '2px solid black', paddingBottom: '10px', marginBottom: '12px' }}>
                 <NavLink style={{ marginRight: '10px' }} to="/fighters">Fighter Index</NavLink>
                 <NavLink style={{ marginRight: '10px' }} to="/fighters/new">Add a New Fighter</NavLink>
+                <NavLink style={{ marginRight: '10px' }} to="/gyms">Gym Index</NavLink>
               </div>
               <Route exact path="/" render={() =>
                 <div>
@@ -27,6 +29,7 @@ class App extends Component {
                     <p>Click a link to get started</p>
                 </div>} />
               <Route path="/fighters" component={FightersPage} />
+              <Route path="/gyms" component={GymsPage} />
             </div>
           </Router>
         </div>
