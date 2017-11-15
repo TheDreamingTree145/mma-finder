@@ -1,1 +1,3 @@
-Why is the index not updating after form submit
+Is my fetch in a proper call space? If someone didn't go to index first it wouldn't work
+
+In FighterShow not sure why passing {fighter} instead of props
