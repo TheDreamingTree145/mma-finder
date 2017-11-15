@@ -19,8 +19,8 @@ class FightersPage extends Component {
     const { match, fighters } = this.props;
     return (
       <div>
-        <FightersList fighters={this.props.fighters} />
         <Switch>
+          <Route exact path={`${match.url}/`} component={(props) => <FightersList {...props} fighters={fighters} />}  />
           <Route exact path={`${match.url}/new`} component={FighterForm} />
           <Route path={`${match.url}/:fighterId`} component={FighterShow} />
         </Switch>
