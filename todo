@@ -1,3 +1,7 @@
 Is my fetch in a proper call space? If someone didn't go to index first it wouldn't work
 
 In FighterShow not sure why passing {fighter} instead of props
+
+Be able to filter the index page
+
+Nested gym/fighters route

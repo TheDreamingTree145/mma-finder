@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 /* Don't understand why I now need fighters 3 times */
 
 const FightersList = (props) => {
+
   function listFighters() {
     return props.fighters.fighters.map(fighter => {
       return (
