@@ -33,6 +33,7 @@ class App extends Component {
                 <NavLink style={{ marginRight: '10px' }} to="/fighters">Fighter Index</NavLink>
                 <NavLink style={{ marginRight: '10px' }} to="/fighters/new">Add a New Fighter</NavLink>
                 <NavLink style={{ marginRight: '10px' }} to="/gyms">Gym Index</NavLink>
+                <NavLink style={{ marginRight: '10px' }} to="/gyms/new">Add a Gym</NavLink>
               </div>
               <Route exact path="/" render={() =>
                 <div>
