@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import{ BrowserRouter as Router, NavLink, Route } from 'react-router-dom';
+import{ BrowserRouter as Router, Route } from 'react-router-dom';
 import { connect } from 'react-redux';
 import {bindActionCreators} from 'redux';
 import FightersPage from './containers/fighters/FightersPage';
@@ -8,8 +8,8 @@ import {fetchGyms} from './actions/gymActions';
 import * as actions from './actions/gymActions';
 import logo from './logo.jpg';
 import './App.css';
-
-
+import { Header, } from 'semantic-ui-react';
+import Navbar from './components/Navbar';
 
 class App extends Component {
 
@@ -26,15 +26,10 @@ class App extends Component {
         <div>
           <Router>
             <div>
-              <div style={{ borderBottom: '2px solid black', paddingBottom: '10px', marginBottom: '12px' }}>
-                <NavLink style={{ marginRight: '10px' }} to="/fighters">Fighter Index</NavLink>
-                <NavLink style={{ marginRight: '10px' }} to="/fighters/new">Add a New Fighter</NavLink>
-                <NavLink style={{ marginRight: '10px' }} to="/gyms">Gym Index</NavLink>
-                <NavLink style={{ marginRight: '10px' }} to="/gyms/new">Add a Gym</NavLink>
-              </div>
+              <Navbar />
               <Route exact path="/" render={() =>
                 <div>
-                  <h3>The largest collection of MMA fighters, gyms, and fights ever!</h3>
+                  <Header inverted as="h1">The largest collection of MMA fighters and gyms ever!</Header>
                     <p>Click a link to get started</p>
                 </div>} />
               <Route path="/fighters" component={FightersPage} />
