@@ -4,6 +4,8 @@ export default function gymsReducer(state = {loading: false, gyms: []}, action) 
       return {loading: false, gyms: action.payload.gyms}
     case 'LOADING_GYMS':
       return Object.assign({}, state, {loading: true})
+    case 'ADD_GYM':
+      return {gyms: state.gyms.concat(action.payload.gym)}
     default:
       return state
   }

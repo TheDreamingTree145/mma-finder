@@ -13,3 +13,27 @@ export function fetchGyms() {
     })
   }
 }
+
+export function postGyms(state) {
+  return function(dispatch) {
+    dispatch({type: 'LOADING_GYMS'})
+    return fetch('http://localhost:3001/api/gyms', {
+      method: 'post',
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        gym: {
+          name: state.name,
+          location: state.location,
+          owner: state.owner
+        }
+      })
+    }).then(response  => {
+      return response.json()
+    }).then(responseJson => {
+      dispatch({type: 'ADD_GYM', payload: responseJson})
+    })
+  }
+}
