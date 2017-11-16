@@ -4,6 +4,8 @@ In FighterShow not sure why passing {fighter} instead of props
 
 Be able to filter the index page
 
+Ability to pull a gyms fighters and put them on page
+
 add descritption and image to fighter and gym
 
 why aren't there like good docs on ui's
