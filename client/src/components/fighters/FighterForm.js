@@ -33,54 +33,73 @@ class FighterForm extends Component {
 
   render() {
     return (
-      <div className="fightersForm">
-        <h1>New Fighter Form</h1>
-          <form onSubmit={this.handleOnSubmit}>
+      <form onSubmit={this.handleOnSubmit}>
+        <div className="ui form">
+          <div className="ui one column stackable center aligned grid container">
+            <div className="center aligned column twelve wide">
 
-            <label>Name: </label>
-            <input
-              type='text'
-              name="name"
-              onChange={this.handleOnChange}
-              value={this.state.name}
-             /><br /><br />
+              <div className="four wide field">
+                <label>Name: </label>
+                <input
+                  type='text'
+                  name="name"
+                  onChange={this.handleOnChange}
+                  value={this.state.name}
+                 />
+              </div>
 
-            <label>Age: </label>
-            <input
-              type='number'
-              name="age"
-              min='18'
-              max='99'
-              onChange={this.handleOnChange}
-              value={this.state.age}
-            /><br /><br />
+              <div className="four wide field">
+                <label>Age: </label>
+                <input
+                  type='number'
+                  name="age"
+                  min='18'
+                  max='99'
+                  onChange={this.handleOnChange}
+                  value={this.state.age}
+                  />
+              </div>
 
-            <label>Weight Class </label>
-            <select
-              name="weight_class"
-              onChange={this.handleOnChange}
-              value={this.state.weight_class}>
-              <option value="Flyweight">Flyweight</option>
-              <option value="Bantamweight">Bantamweight</option>
-              <option value="Featherweight">Featherweight</option>
-              <option value="Lightweight">Lightweight</option>
-              <option value="Welterweight">Welterweight</option>
-              <option value="Middleweight">Middleweight</option>
-              <option value="Light Heavyweight">Light Heavyweight</option>
-              <option value="Heavyweight">Heavyweight</option>
-            </select><br /><br />
+              <div className="four wide field">
+                <label>Weight Class </label>
+                <select
+                  name="weight_class"
+                  onChange={this.handleOnChange}
+                  value={this.state.weight_class}>
+                  <option value="Flyweight">Flyweight</option>
+                  <option value="Bantamweight">Bantamweight</option>
+                  <option value="Featherweight">Featherweight</option>
+                  <option value="Lightweight">Lightweight</option>
+                  <option value="Welterweight">Welterweight</option>
+                  <option value="Middleweight">Middleweight</option>
+                  <option value="Light Heavyweight">Light Heavyweight</option>
+                  <option value="Heavyweight">Heavyweight</option>
+                </select>
+              </div>
 
-            <label>Hometown </label>
-            <input
-              type="text"
-              name="hometown"
-              onChange={this.handleOnChange}
-              value={this.state.hometown}
-            /><br /><br />
+              <div className="four wide field">
+                <label>Hometown </label>
+                <input
+                  type="text"
+                  name="hometown"
+                  onChange={this.handleOnChange}
+                  value={this.state.hometown}
+                />
+              </div>
 
-            <input type="submit" value="Submit New Fighter" />
-          </form>
-      </div>
+              <div className="eight wide field">
+                <label>Description </label>
+                <textarea
+                  type="text"
+                  name="description"
+                />
+              </div>
+
+              <input type="submit" value="Submit New Fighter" />
+            </div>
+          </div>
+        </div>
+      </form>
     )
   }
 }
