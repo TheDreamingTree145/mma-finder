@@ -23,10 +23,7 @@ class App extends Component {
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
         </header>
-      <div>
-      <div>
-        <h2>Welcome Page</h2>
-      </div>
+        <div>
           <Router>
             <div>
               <div style={{ borderBottom: '2px solid black', paddingBottom: '10px', marginBottom: '12px' }}>

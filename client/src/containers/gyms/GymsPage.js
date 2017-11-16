@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { Route, Switch } from 'react-router-dom';
 import GymsList from '../../components/gyms/GymsList';
 import GymForm from '../../components/gyms/GymForm';
+import GymShow from '../../components/gyms/GymShow';
 
 class GymsPage extends Component {
   render() {
@@ -11,7 +12,8 @@ class GymsPage extends Component {
       <div>
         <Switch>
           <Route exact path={`${match.url}`} component={(props) => <GymsList {...props} gyms={gyms} />}  />
-          <Route path={`${match.url}/new`} component={GymForm} />
+          <Route exact path={`${match.url}/new`} component={GymForm} />
+          <Route exact path={`${match.url}/:gymId`} component={GymShow} />
         </Switch>
       </div>
     )
