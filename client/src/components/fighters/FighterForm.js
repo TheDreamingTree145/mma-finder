@@ -38,7 +38,7 @@ class FighterForm extends Component {
           <div className="ui one column stackable center aligned grid container">
             <div className="center aligned column twelve wide">
 
-              <div className="four wide field">
+              <div className="eight wide field">
                 <label>Name: </label>
                 <input
                   type='text'
@@ -48,7 +48,7 @@ class FighterForm extends Component {
                  />
               </div>
 
-              <div className="four wide field">
+              <div className="eight wide field">
                 <label>Age: </label>
                 <input
                   type='number'
@@ -60,7 +60,7 @@ class FighterForm extends Component {
                   />
               </div>
 
-              <div className="four wide field">
+              <div className="eight wide field">
                 <label>Weight Class </label>
                 <select
                   name="weight_class"
@@ -77,7 +77,7 @@ class FighterForm extends Component {
                 </select>
               </div>
 
-              <div className="four wide field">
+              <div className="eight wide field">
                 <label>Hometown </label>
                 <input
                   type="text"
