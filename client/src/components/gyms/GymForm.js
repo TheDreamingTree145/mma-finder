@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import {connect} from 'react-redux';
+import {bindActionCreators} from 'redux';
 
 class GymForm extends Component {
   constructor(props) {
@@ -34,4 +36,8 @@ class GymForm extends Component {
   }
 }
 
-export default GymForm;
+const mapDispatchToProps = (dispatch) => {
+  return {actions: bindActionCreators(actions, dispatch)}
+}
+
+export default connect(null, mapDispatchToProps)(GymForm);
