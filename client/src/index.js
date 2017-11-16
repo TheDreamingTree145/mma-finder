@@ -7,6 +7,7 @@ import { Provider } from 'react-redux';
 import rootReducer from './reducers/index';
 import App from './App';
 import registerServiceWorker from './registerServiceWorker';
+import "semantic-ui-css/semantic.css";
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 const store = createStore(rootReducer, composeEnhancers(

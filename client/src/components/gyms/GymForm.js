@@ -1,11 +1,14 @@
 import React, { Component } from 'react';
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
+import {postGyms} from '../../actions/gymActions';
+import * as actions from '../../actions/gymActions';
 
 class GymForm extends Component {
   constructor(props) {
     super(props);
   }
+
   render() {
     return (
       <div className="gymForm">
