@@ -94,6 +94,8 @@ class FighterForm extends Component {
                 <textarea
                   type="text"
                   name="description"
+                  onChange={this.handleOnChange}
+                  value={this.state.description}
                 />
               </div>
 

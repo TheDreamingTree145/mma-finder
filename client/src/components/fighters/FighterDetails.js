@@ -13,7 +13,7 @@ const FighterDetails = (props) => {
           <p>Gym: <Link style={{ marginBottom: '5px'}} to={`/gyms/${props.fighter.gym.id}`}>{props.fighter.gym.name}</Link></p>
         </div>
         <div className="six wide column">
-          <p>Description: Pending</p>
+          <p>{props.fighter.description}</p>
         </div>
         <div className="four wide column">
           <h2>Pending Image</h2>
