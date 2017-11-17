@@ -1,5 +1,4 @@
 class API::GymsController < ApplicationController
-  before_action :find_gym, only: [:show, :update]
 
   def index
     gyms = Gym.all

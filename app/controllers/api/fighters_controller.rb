@@ -1,11 +1,7 @@
 class API::FightersController < ApplicationController
 
   def index
-    if find_gym
-      fighters = @gym.fighters
-    else
-      fighters = Fighter.all
-    end
+    fighters = Fighter.all
     render :json => fighters, status: 200
   end
 
