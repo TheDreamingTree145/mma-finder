@@ -27,7 +27,8 @@ export function postGyms(state) {
         gym: {
           name: state.name,
           location: state.location,
-          owner: state.owner
+          owner: state.owner,
+          description: state.description
         }
       })
     }).then(response  => {

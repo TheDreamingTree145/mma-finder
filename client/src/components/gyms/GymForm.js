@@ -12,6 +12,7 @@ class GymForm extends Component {
       name: '',
       location: '',
       owner: '',
+      description: '',
     }
   }
 
@@ -52,6 +53,13 @@ class GymForm extends Component {
             <input
             type="text"
             name="gymOwner"
+            onChange={this.handleOnChange}
+            /><br /><br />
+
+            <label>Gym Description: </label>
+            <textarea
+            type="text"
+            name="gymDescription"
             onChange={this.handleOnChange}
             /><br /><br />
 

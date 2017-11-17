@@ -14,6 +14,7 @@ class FighterForm extends Component {
       weight_class: '',
       hometown: '',
       gym_id: '',
+      description: '',
     }
   }
 
