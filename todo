@@ -4,9 +4,9 @@ In FighterShow not sure why passing {fighter} instead of props
 
 Be able to filter the index page
 
-Ability to pull a gyms fighters and put them on page
+Ability to pull a gyms fighters and put them on page... Can do has many but says that not proper
 
-add descritption and image to fighter and gym
+add image to fighter and gym
 
 why aren't there like good docs on ui's
 
@@ -21,3 +21,5 @@ Can't freaking center the semantic ui and it screws up my freaking nav bar
 Validations
 
 associate gym with fighter
+
+could i make another variable in reducer to hold the id for the redirect to show page afte creation
