@@ -38,28 +38,28 @@ class GymForm extends Component {
             <label>Gym Name: </label>
             <input
             type="text"
-            name="gymName"
+            name="name"
             onChange={this.handleOnChange}
             /><br /><br />
 
             <label>Gym Location: </label>
             <input
             type="text"
-            name="gymLocation"
+            name="location"
             onChange={this.handleOnChange}
             /><br /><br />
 
             <label>Gym Owner: </label>
             <input
             type="text"
-            name="gymOwner"
+            name="owner"
             onChange={this.handleOnChange}
             /><br /><br />
 
             <label>Gym Description: </label>
             <textarea
             type="text"
-            name="gymDescription"
+            name="description"
             onChange={this.handleOnChange}
             /><br /><br />
 
