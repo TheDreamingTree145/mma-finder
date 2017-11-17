@@ -35,6 +35,7 @@ class FighterForm extends Component {
     return (
       <form onSubmit={this.handleOnSubmit}>
         <div className="ui form">
+          <h1>Add a New Fighter</h1>
           <div className="ui one column stackable center aligned grid container">
             <div className="center aligned column twelve wide">
 
