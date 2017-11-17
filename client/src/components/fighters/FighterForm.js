@@ -15,7 +15,6 @@ class FighterForm extends Component {
       hometown: '',
       gym_id: '',
       description: '',
-      picture: '', /* wtf */
     }
   }
 
@@ -96,8 +95,6 @@ class FighterForm extends Component {
                   type="file"
                   name="picture"
                   accept="image/*"
-                  onChange={this.handleOnChange}
-                  value={this.state.picture}
                 />
               </div>
 

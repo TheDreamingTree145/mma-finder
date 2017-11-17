@@ -4,7 +4,7 @@ In FighterShow not sure why passing {fighter} instead of props
 
 Be able to filter the index page
 
-Ability to pull a gyms fighters and put them on page... Can do has many but says that not proper
+Ability to pull a gyms fighters and put them on page... Can do has many but says that not proper.. Can't do has_many
 
 add image to fighter and gym
 

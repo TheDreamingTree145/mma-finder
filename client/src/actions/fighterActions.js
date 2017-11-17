@@ -19,6 +19,10 @@ export function postFighters(state) {
     dispatch({type: 'LOADING_FIGHTERS'})
     return fetch('http://localhost:3001/api/fighters', {
       method: 'post',
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+      },
       body: JSON.stringify({
         fighter: {
           name: state.name,
@@ -27,7 +31,6 @@ export function postFighters(state) {
           hometown: state.hometown,
           gym_id: 1,
           description: state.description,
-          avatar: state.picture
         }
       })
     }).then(response  => {
