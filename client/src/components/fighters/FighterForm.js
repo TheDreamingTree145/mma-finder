@@ -15,6 +15,7 @@ class FighterForm extends Component {
       hometown: '',
       gym_id: '',
       description: '',
+      picture: '', /* wtf */
     }
   }
 
@@ -86,6 +87,17 @@ class FighterForm extends Component {
                   name="hometown"
                   onChange={this.handleOnChange}
                   value={this.state.hometown}
+                />
+              </div>
+
+              <div className="eight wide field">
+                <label>Upload Picture</label>
+                <input
+                  type="file"
+                  name="picture"
+                  accept="image/*"
+                  onChange={this.handleOnChange}
+                  value={this.state.picture}
                 />
               </div>
 

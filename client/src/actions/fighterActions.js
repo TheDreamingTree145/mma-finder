@@ -26,13 +26,16 @@ export function postFighters(state) {
           weight_class: state.weight_class,
           hometown: state.hometown,
           gym_id: 1,
-          description: state.description
+          description: state.description,
+          avatar: state.picture
         }
       })
     }).then(response  => {
       return response.json()
     }).then(responseJson => {
       dispatch({type: 'ADD_FIGHTER', payload: responseJson})
+    }).catch(e => {
+      console.log(e)
     })
   }
 }
