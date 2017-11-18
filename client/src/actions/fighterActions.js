@@ -30,7 +30,7 @@ export function postFighters(state) {
           weight_class: state.weight_class,
           hometown: state.hometown,
           gym_id: 1,
-          description: state.description,
+          description: state.description
         }
       })
     }).then(response  => {

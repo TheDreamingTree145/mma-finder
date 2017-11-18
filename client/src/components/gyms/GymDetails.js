@@ -2,6 +2,7 @@ import React from 'react';
 
 const GymDetails = (props) => {
   return (
+
     <div className="ui internally celled grid container">
       <div className="row">
         <div className="four wide column">
