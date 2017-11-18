@@ -5,8 +5,6 @@ Be able to filter the index page... Have it sorted by weight class
 Ability to pull a gyms fighters and put them on page... Can do has many but says that not proper.. Can't do has_many
 -- find fighters by gym_id
 
-add image to fighter and gym
-
 why aren't there like good docs on ui's
 
 navbar border won't show
@@ -24,6 +22,3 @@ associate gym with fighter -- pass down gyms in props
 could i make another variable in reducer to hold the id for the redirect to show page after creation
 
 const fighter = props.fighter.find(fighter => fighter.id === props.match.params.fighterId)
-
-
-just image URL

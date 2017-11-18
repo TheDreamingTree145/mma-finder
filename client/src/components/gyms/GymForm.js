@@ -13,6 +13,7 @@ class GymForm extends Component {
       location: '',
       owner: '',
       description: '',
+      image_url: ''
     }
   }
 
@@ -40,6 +41,7 @@ class GymForm extends Component {
             type="text"
             name="name"
             onChange={this.handleOnChange}
+            value={this.state.name}
             /><br /><br />
 
             <label>Gym Location: </label>
@@ -47,6 +49,7 @@ class GymForm extends Component {
             type="text"
             name="location"
             onChange={this.handleOnChange}
+            value={this.state.location}
             /><br /><br />
 
             <label>Gym Owner: </label>
@@ -54,6 +57,7 @@ class GymForm extends Component {
             type="text"
             name="owner"
             onChange={this.handleOnChange}
+            value={this.state.owner}
             /><br /><br />
 
             <label>Gym Description: </label>
@@ -61,6 +65,15 @@ class GymForm extends Component {
             type="text"
             name="description"
             onChange={this.handleOnChange}
+            value={this.state.description}
+            /><br /><br />
+
+            <label>Image URL: </label>
+            <input
+            type="text"
+            name="image_url"
+            onChange={this.handleOnChange}
+            value={this.state.image_url}
             /><br /><br />
 
             <input type="submit" value="Submit New Gym" />

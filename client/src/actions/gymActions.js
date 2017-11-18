@@ -28,7 +28,8 @@ export function postGyms(state) {
           name: state.name,
           location: state.location,
           owner: state.owner,
-          description: state.description
+          description: state.description,
+          image_url: state.image_url
         }
       })
     }).then(response  => {
