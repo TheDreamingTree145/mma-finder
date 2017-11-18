@@ -1,6 +1,6 @@
 Is my fetch in a proper call space? If someone didn't go to index first it wouldn't work
 
-Be able to filter the index page... Have it sorted by weight class
+weird it doesn't autoselect flyweight on fighter form
 
 Ability to pull a gyms fighters and put them on page... Can do has many but says that not proper.. Can't do has_many
 -- find fighters by gym_id
