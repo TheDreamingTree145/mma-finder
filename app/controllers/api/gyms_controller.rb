@@ -24,7 +24,7 @@ class API::GymsController < ApplicationController
   private
 
     def gym_params
-      params.require(:gym).permit(:name, :location, :owner, :description)
+      params.require(:gym).permit(:name, :location, :owner, :description, :image_url)
     end
 
 end

@@ -24,7 +24,7 @@ class API::FightersController < ApplicationController
   private
 
     def fighter_params
-      params.require(:fighter).permit(:name, :age, :weight_class, :hometown, :gym_id, :description)
+      params.require(:fighter).permit(:name, :age, :weight_class, :hometown, :gym_id, :description, :image_url)
     end
 
 end
