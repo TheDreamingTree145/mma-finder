@@ -16,7 +16,7 @@ const FighterDetails = (props) => {
           <p>{props.fighter.description}</p>
         </div>
         <div className="four wide column">
-          <h2>Pending Image</h2>
+          <img src={props.fighter.image_url} />
         </div>
       </div>
     </div>
