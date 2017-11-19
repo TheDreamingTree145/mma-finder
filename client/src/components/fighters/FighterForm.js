@@ -28,12 +28,31 @@ class FighterForm extends Component {
 
   handleOnSubmit = (event) => {
     event.preventDefault();
-    const {history} = this.props
+    const {history, gyms, fighters} = this.props
     this.props.actions.postFighters(this.state)
     history.push('/fighters')
   }
 
   render() {
+
+    const FighterFormSelectOptions = (props) => {
+      function selectOptions() {
+        return props.gyms.gyms.map(gym => {
+          return(
+            <option key={gym.id} value={gym.id}>{gym.name}</option>
+          )
+        })
+      }
+      return (
+        <select
+          name="gym_id"
+          onChange={this.handleOnChange}
+          value={this.state.gym_id}>
+          {selectOptions()}
+        </select>
+      )
+    }
+
     return (
       <form onSubmit={this.handleOnSubmit}>
         <div className="ui form">
@@ -98,6 +117,11 @@ class FighterForm extends Component {
                   onChange={this.handleOnChange}
                   value={this.state.image_url}
                 />
+              </div>
+
+              <div className="eight wide field">
+                <label>Fighter Gym: </label>
+                  <FighterFormSelectOptions gyms={this.props.gyms} />
               </div>
 
               <div className="eight wide field">

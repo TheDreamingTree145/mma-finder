@@ -29,7 +29,7 @@ export function postFighters(state) {
           age: state.age,
           weight_class: state.weight_class,
           hometown: state.hometown,
-          gym_id: 1,
+          gym_id: state.gym_id,
           description: state.description,
           image_url: state.image_url
         }

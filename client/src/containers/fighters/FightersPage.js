@@ -16,12 +16,12 @@ class FightersPage extends Component {
   }
 
   render() {
-    const { match, fighters } = this.props;
+    const { match, fighters, gyms} = this.props;
     return (
       <div>
         <Switch>
           <Route exact path={`${match.url}`} component={(props) => <FightersList {...props} fighters={fighters} />}  />
-          <Route exact path={`${match.url}/new`} component={FighterForm} />
+          <Route exact path={`${match.url}/new`} component={(props) => <FighterForm {...props} gyms={gyms} />} />
           <Route exact path={`${match.url}/:fighterId`} component={FighterShow} />
         </Switch>
       </div>
@@ -31,7 +31,8 @@ class FightersPage extends Component {
 
 const mapStateToProps = (state) => {
   return {
-    fighters: state.fighters
+    fighters: state.fighters,
+    gyms: state.gyms
   }
 }
 

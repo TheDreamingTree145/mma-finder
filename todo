@@ -22,3 +22,5 @@ associate gym with fighter -- pass down gyms in props
 could i make another variable in reducer to hold the id for the redirect to show page after creation
 
 const fighter = props.fighter.find(fighter => fighter.id === props.match.params.fighterId)
+
+array of functions
