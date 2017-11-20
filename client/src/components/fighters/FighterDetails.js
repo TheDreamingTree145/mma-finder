@@ -1,11 +1,9 @@
 import React from 'react';
-import { Link, Route, Switch } from 'react-router-dom';
-import FighterEdit from './FighterEdit'
+import { Link} from 'react-router-dom';
 
 const FighterDetails = ({fighter}) => {
 
   const WrappedLink = () => {
-    debugger;
     return (
       <button>
         <Link style={{ marginBottom: '5px'}} to={`/fighters/${fighter.id}/edit`}>Edit this Fighter</Link>
@@ -31,11 +29,6 @@ const FighterDetails = ({fighter}) => {
         </div>
         <div>
           <WrappedLink />
-        </div>
-        <div>
-          <Switch>
-            <Route exact path={`/fighters/:fighterId/edit`} component={(props) => <FighterEdit {...props} fighter={fighter} />} />
-          </Switch>
         </div>
       </div>
     </div>

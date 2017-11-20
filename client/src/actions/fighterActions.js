@@ -43,3 +43,34 @@ export function postFighters(state) {
     })
   }
 }
+
+export function updateFighters(state) {
+  debugger;
+  return function(dispatch) {
+    dispatch({type: 'LOADING_FIGHTERS'})
+    return fetch('/api/fighters')
+      method: 'patch',
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        fighter: {
+          name: state.name,
+          age: state.age,
+          weight_class: state.weight_class,
+          hometown: state.hometown,
+          gym_id: state.gym_id,
+          description: state.description,
+          image_url: state.image_url
+        }
+      })
+    }).then(response  => {
+      return response.json()
+    }).then(responseJson => {
+      dispatch({type: 'UPDATE_FIGHTER', payload: responseJson})
+    }).catch(e => {
+      console.log(e)
+    })
+  }
+}

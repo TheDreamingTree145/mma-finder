@@ -7,6 +7,7 @@ import * as actions from '../../actions/fighterActions.js';
 import FighterForm from '../../components/fighters/FighterForm';
 import FightersList from '../../components/fighters/FightersList';
 import FighterShow from '../../components/fighters/FighterShow';
+import FighterEdit from '../../components/fighters/FighterEdit';
 
 
 class FightersPage extends Component {
@@ -23,6 +24,7 @@ class FightersPage extends Component {
           <Route exact path={`${match.url}`} component={(props) => <FightersList {...props} fighters={fighters} />}  />
           <Route exact path={`${match.url}/new`} component={(props) => <FighterForm {...props} gyms={gyms} />} />
           <Route exact path={`${match.url}/:fighterId`} component={FighterShow} />
+          <Route exact path={`${match.url}/:fighterId/edit`} component={(props) => <FighterEdit {...props} fighters={fighters} gyms={gyms} />} />
         </Switch>
       </div>
     )

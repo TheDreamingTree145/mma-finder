@@ -2,6 +2,8 @@ Is my fetch in a proper call space? If someone didn't go to index first it would
 
 weird it doesn't autoselect flyweight on fighter form
 
+alert errors fetch
+
 Ability to pull a gyms fighters and put them on page... Can do has many but says that not proper.. Can't do has_many
 -- find fighters by gym_id
 
@@ -17,10 +19,10 @@ Can't freaking center the semantic ui and it screws up my freaking nav bar
 
 Validations
 
-associate gym with fighter -- pass down gyms in props
-
-could i make another variable in reducer to hold the id for the redirect to show page after creation
-
 const fighter = props.fighter.find(fighter => fighter.id === props.match.params.fighterId)
 
+
+questions
+
+componentwillreceiveprops
 array of functions
