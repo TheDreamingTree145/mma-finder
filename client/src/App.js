@@ -4,8 +4,7 @@ import { connect } from 'react-redux';
 import {bindActionCreators} from 'redux';
 import FightersPage from './containers/fighters/FightersPage';
 import GymsPage from './containers/gyms/GymsPage';
-import {fetchGyms} from './actions/gymActions';
-import * as actions from './actions/gymActions';
+import * as actions from './actions/index.js';
 import logo from './assets/css/logo.jpg';
 import './assets/css/App.css';
 import { Header, } from 'semantic-ui-react';
@@ -13,8 +12,11 @@ import Navbar from './components/Navbar';
 
 class App extends Component {
 
+
+
   componentDidMount() {
     this.props.actions.fetchGyms();
+    this.props.actions.fetchFighters();
   }
 
   render() {
