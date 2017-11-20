@@ -7,7 +7,7 @@ const FighterEdit = (props) => {
 
   return (
     <div>
-      <FighterEditForm fighter={fighter} gyms={props.gyms} />
+      <FighterEditForm history={props.history} match={props.match} fighter={fighter} gyms={props.gyms} />
     </div>
   )
 }

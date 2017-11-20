@@ -17,7 +17,9 @@ class API::FightersController < ApplicationController
 
   def update
     @fighter = Fighter.find(params[:id])
+    binding.pry
     @fighter.update(fighter_params)
+    binding.pry
     render :json => @fighter
   end
 

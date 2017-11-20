@@ -28,7 +28,7 @@ class FighterForm extends Component {
 
   handleOnSubmit = (event) => {
     event.preventDefault();
-    const {history, gyms, fighters} = this.props
+    const {history} = this.props
     this.props.actions.postFighters(this.state)
     history.push('/fighters')
   }

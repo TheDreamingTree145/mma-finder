@@ -24,5 +24,6 @@ const fighter = props.fighter.find(fighter => fighter.id === props.match.params.
 
 questions
 
+props.props FighterEdit
 componentwillreceiveprops
 array of functions

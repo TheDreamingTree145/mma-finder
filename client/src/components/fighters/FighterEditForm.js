@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
+import {updateFighters} from '../../actions/fighterActions'
+import * as actions from '../../actions/fighterActions'
 
 class FighterEditForm extends Component {
   constructor(props) {
@@ -26,8 +28,9 @@ class FighterEditForm extends Component {
 
   handleOnSubmit = (event) => {
     event.preventDefault();
-    const {history, gyms, fighters} = this.props
-
+    const {history, match} = this.props
+    const fighterId = parseInt(match.params.fighterId)
+    this.props.actions.updateFighters(this.state, fighterId)
     history.push('/fighters')
   }
 
@@ -132,7 +135,7 @@ class FighterEditForm extends Component {
                 />
               </div>
 
-              <input type="submit" value="Submit New Fighter" />
+              <input type="submit" value="Edit Fighter" />
             </div>
           </div>
         </div>
@@ -141,4 +144,8 @@ class FighterEditForm extends Component {
   }
 }
 
-export default FighterEditForm;
+const mapDispatchToProps = (dispatch) => {
+  return {actions: bindActionCreators(actions, dispatch)}
+}
+
+export default connect(null, mapDispatchToProps)(FighterEditForm);
