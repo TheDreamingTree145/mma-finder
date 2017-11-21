@@ -13,7 +13,7 @@ const GymDetails = (props) => {
           <strong>Owner: {props.gym.owner}</strong><br />
         </div>
         <div className="six wide column">
-          <p>Description: PENDING</p>
+          <p>{props.gym.description}</p>
         </div>
         <div className="four wide column">
           <img alt={props.gym.name} src={props.gym.image_url} />
