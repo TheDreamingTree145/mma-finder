@@ -25,7 +25,7 @@ const FighterDetails = ({fighter}) => {
           <p>{fighter.description}</p>
         </div>
         <div className="four wide column">
-          <img src={fighter.image_url} />
+          <img alt={fighter.name} src={fighter.image_url} />
         </div>
         <div>
           <WrappedLink />

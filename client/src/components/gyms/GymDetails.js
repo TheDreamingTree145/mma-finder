@@ -16,7 +16,7 @@ const GymDetails = (props) => {
           <p>Description: PENDING</p>
         </div>
         <div className="four wide column">
-          <img src={props.gym.image_url} />
+          <img alt={props.gym.name} src={props.gym.image_url} />
         </div>
       </div>
       <div className="row">
