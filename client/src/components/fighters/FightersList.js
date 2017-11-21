@@ -116,38 +116,42 @@ const FightersList = (props) => {
   })
 
   return (
-    <div>
-      <div>
-        <h5>Flyweights</h5>
-        {flyweightMap}
-      </div>
-      <div>
-        <h5>Bantamweight</h5>
-        {bantamweightMap}
-      </div>
-      <div>
-        <h5>Featherweights</h5>
-        {featherweightMap}
-      </div>
-      <div>
-        <h5>Lightweights</h5>
-        {lightweightMap}
-      </div>
-      <div>
-        <h5>Welterweights</h5>
-        {welterweightMap}
-      </div>
-      <div>
-        <h5>Middleweights</h5>
-        {middleweightMap}
-      </div>
-      <div>
-        <h5>Light Heavyweights</h5>
-        {lightHeavyweightMap}
-      </div>
-      <div>
-        <h5>Heavyweights</h5>
-        {heavyweightMap}
+    <div className="ui grid container">
+      <div className="row">
+        <div className="four wide column">
+          <h5>Flyweights</h5>
+          {flyweightMap}
+        </div>
+        <div className="four wide column">
+          <h5>Bantamweight</h5>
+          {bantamweightMap}
+        </div>
+        <div className="four wide column">
+          <h5>Featherweights</h5>
+          {featherweightMap}
+        </div>
+        <div className="four wide column">
+          <h5>Lightweights</h5>
+          {lightweightMap}
+        </div>
+    </div>
+      <div className="row">
+        <div className="four wide column">
+          <h5>Welterweights</h5>
+          {welterweightMap}
+        </div>
+        <div className="four wide column">
+          <h5>Middleweights</h5>
+          {middleweightMap}
+        </div>
+        <div className="four wide column">
+          <h5>Light Heavyweights</h5>
+          {lightHeavyweightMap}
+        </div>
+        <div className="four wide column">
+          <h5>Heavyweights</h5>
+          {heavyweightMap}
+        </div>
       </div>
     </div>
   )

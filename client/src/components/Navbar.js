@@ -4,11 +4,12 @@ import '../assets/css/Navbar.css';
 
 const Navbar = () => {
   return (
-    <div className="nav-bar">
-      <NavLink className="nav-link" to="/fighters">Fighter Index</NavLink>
-      <NavLink className="nav-link" to="/fighters/new">Add a New Fighter</NavLink>
-      <NavLink className="nav-link" to="/gyms">Gym Index</NavLink>
-      <NavLink className="nav-link" to="/gyms/new">Add a Gym</NavLink>
+    <div className="ui fluid five item compact menu">
+      <NavLink className="active item" to="/">Home</NavLink>
+      <NavLink className="active item" to="/fighters">Fighter Index</NavLink>
+      <NavLink className="active item" to="/fighters/new">Add a New Fighter</NavLink>
+      <NavLink className="active item" to="/gyms">Gym Index</NavLink>
+      <NavLink className="active item" to="/gyms/new">Add a Gym</NavLink>
     </div>
   )
 }
