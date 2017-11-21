@@ -129,6 +129,7 @@ class FighterForm extends Component {
                 </div>
               </div>
 
+              <div className="field">
                 <div className="eight wide field">
                   <label>Description </label>
                   <textarea
@@ -138,6 +139,7 @@ class FighterForm extends Component {
                     value={this.state.description}
                   />
                 </div>
+              </div>
 
                 <input type="submit" value="Submit New Fighter" />
 
