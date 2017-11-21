@@ -4,6 +4,14 @@ import GymFightersList from './GymFightersList';
 
 const GymDetails = (props) => {
 
+  const WrappedLink = () => {
+    return (
+      <button>
+        <Link style={{ marginBottom: '5px'}} to={`/gyms/${props.gym.id}/edit`}>Edit this Gym</Link>
+      </button>
+    )
+  }
+
   return (
     <div className="ui internally celled grid container">
       <div className="row">
@@ -17,6 +25,9 @@ const GymDetails = (props) => {
         </div>
         <div className="four wide column">
           <img alt={props.gym.name} src={props.gym.image_url} />
+        </div>
+        <div>
+          <WrappedLink />
         </div>
       </div>
       <div className="row">
