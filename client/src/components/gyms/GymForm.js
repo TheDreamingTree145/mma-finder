@@ -33,52 +33,69 @@ class GymForm extends Component {
 
   render() {
     return (
-      <div className="gymForm">
-        <h1>New Gym Form</h1>
-          <form onSubmit={this.handleOnSubmit}>
-            <label>Gym Name: </label>
-            <input
-            type="text"
-            name="name"
-            onChange={this.handleOnChange}
-            value={this.state.name}
-            /><br /><br />
+      <form onSubmit={this.handleOnSubmit}>
+        <div className="ui form">
+          <h1>New Gym Form</h1>
+          <div className="ui one column stackable center aligned grid container">
+            <div className="center aligned column twelve wide">
 
-            <label>Gym Location: </label>
-            <input
-            type="text"
-            name="location"
-            onChange={this.handleOnChange}
-            value={this.state.location}
-            /><br /><br />
+              <div className="fields">
+                <div className="eight wide field">
+                  <label>Gym Name: </label>
+                  <input
+                  type="text"
+                  name="name"
+                  onChange={this.handleOnChange}
+                  value={this.state.name}
+                  />
+                </div>
 
-            <label>Gym Owner: </label>
-            <input
-            type="text"
-            name="owner"
-            onChange={this.handleOnChange}
-            value={this.state.owner}
-            /><br /><br />
+                <div className="eight wide field">
+                  <label>Gym Location: </label>
+                  <input
+                  type="text"
+                  name="location"
+                  onChange={this.handleOnChange}
+                  value={this.state.location}
+                  />
+                </div>
+              </div>
 
-            <label>Gym Description: </label>
-            <textarea
-            type="text"
-            name="description"
-            onChange={this.handleOnChange}
-            value={this.state.description}
-            /><br /><br />
+              <div className="fields">
+                <div className="eight wide field">
+                  <label>Gym Description: </label>
+                  <textarea
+                  type="text"
+                  name="description"
+                  onChange={this.handleOnChange}
+                  value={this.state.description}
+                  />
+                </div>
 
-            <label>Image URL: </label>
-            <input
-            type="text"
-            name="image_url"
-            onChange={this.handleOnChange}
-            value={this.state.image_url}
-            /><br /><br />
+                <div className="eight wide field">
+                  <label>Gym Owner: </label>
+                  <input
+                  type="text"
+                  name="owner"
+                  onChange={this.handleOnChange}
+                  value={this.state.owner}
+                  />
+                </div>
+              </div>
 
-            <input type="submit" value="Submit New Gym" />
-          </form>
-      </div>
+              <label>Image URL: </label>
+              <input
+              type="text"
+              name="image_url"
+              onChange={this.handleOnChange}
+              value={this.state.image_url}
+              /><br /><br />
+
+              <input type="submit" value="Submit New Gym" />
+            </div>
+          </div>
+        </div>
+      </form>
     )
   }
 }
