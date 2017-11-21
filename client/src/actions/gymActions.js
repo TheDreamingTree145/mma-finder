@@ -39,3 +39,31 @@ export function postGyms(state) {
     })
   }
 }
+
+export function updateGyms(state, gymId) {
+  return function(dispatch) {
+    dispatch({type: 'LOADING_GYMS'})
+    return fetch(`http://localhost:3001/api/gyms/${gymId}`, {
+      method: 'PATCH',
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        gym: {
+          name: state.name,
+          location: state.location,
+          owner: state.owner,
+          image_url: state.image_url,
+          description: state.description,
+        }
+      })
+    }).then(response  => {
+      return response.json()
+    }).then(responseJson => {
+      dispatch({type: 'UPDATE_GYM', payload: responseJson})
+    }).catch(e => {
+      console.log(e)
+    })
+  }
+}

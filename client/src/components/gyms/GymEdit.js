@@ -1,4 +1,5 @@
 import React from 'react';
+import GymEditForm from './GymEditForm';
 
 const GymEdit = (props) => {
   const gym = props.gyms.gyms.find(gym => gym.id == props.match.params.gymId)
