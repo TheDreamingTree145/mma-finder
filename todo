@@ -19,8 +19,8 @@ Validations
 
 questions
 
+Update action
 why sometimes .actions.actions .fighters.fighters etc.
 props.props FighterEdit state.fighters.fighters... think its because how im mapping state to props
 componentwillreceiveprops
-array of functions
 im not clearing state
