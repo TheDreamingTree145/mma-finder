@@ -4,9 +4,6 @@ weird it doesn't autoselect flyweight on fighter form
 
 alert errors fetch
 
-Ability to pull a gyms fighters and put them on page... Can do has many but says that not proper.. Can't do has_many
--- find fighters by gym_id
-
 why aren't there like good docs on ui's
 
 navbar border won't show
@@ -19,11 +16,11 @@ Can't freaking center the semantic ui and it screws up my freaking nav bar
 
 Validations
 
-const fighter = props.fighter.find(fighter => fighter.id === props.match.params.fighterId)
-
 
 questions
 
-props.props FighterEdit
+why sometimes .actions.actions .fighters.fighters etc.
+props.props FighterEdit state.fighters.fighters... think its because how im mapping state to props
 componentwillreceiveprops
 array of functions
+im not clearing state

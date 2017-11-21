@@ -45,11 +45,10 @@ export function postFighters(state) {
 }
 
 export function updateFighters(state, fighterId) {
-  debugger;
   return function(dispatch) {
     dispatch({type: 'LOADING_FIGHTERS'})
-    return fetch(`/api/fightrs/${fighterId}`, {
-      method: 'patch',
+    return fetch(`http://localhost:3001/api/fighters/${fighterId}`, {
+      method: 'PATCH',
       headers: {
         'Accept': 'application/json',
         'Content-Type': 'application/json'
@@ -65,6 +64,12 @@ export function updateFighters(state, fighterId) {
           image_url: state.image_url
         }
       })
+    }).then(response  => {
+      return response.json()
+    }).then(responseJson => {
+      dispatch({type: 'UPDATE_FIGHTER', payload: responseJson})
+    }).catch(e => {
+      console.log(e)
     })
   }
 }
