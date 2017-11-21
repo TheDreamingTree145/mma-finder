@@ -7,7 +7,6 @@ import GymsPage from './containers/gyms/GymsPage';
 import * as actions from './actions/index.js';
 import logo from './assets/css/logo.jpg';
 import './assets/css/App.css';
-import { Header, } from 'semantic-ui-react';
 import Navbar from './components/Navbar';
 
 class App extends Component {
@@ -31,7 +30,7 @@ class App extends Component {
               <Navbar />
               <Route exact path="/" render={() =>
                 <div>
-                  <Header inverted as="h1">The largest collection of MMA fighters and gyms ever!</Header>
+                  <h1>The largest collection of MMA fighters and gyms ever!</h1>
                     <p>Click a link to get started</p>
                 </div>} />
               <Route path="/fighters" component={FightersPage} />
