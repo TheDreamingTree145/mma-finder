@@ -29,7 +29,8 @@ export function postGyms(state) {
           location: state.location,
           owner: state.owner,
           description: state.description,
-          image_url: state.image_url
+          image_url: state.image_url,
+          vote: state.vote
         }
       })
     }).then(response  => {
@@ -62,6 +63,31 @@ export function updateGyms(state, gymId) {
       return response.json()
     }).then(responseJson => {
       dispatch({type: 'UPDATE_GYM', payload: responseJson})
+    }).catch(e => {
+      console.log(e)
+    })
+  }
+}
+
+export function voteGym(state, gymId) {
+  debugger;
+  return function(dispatch) {
+    dispatch({type: 'LOADING_GYMS'})
+    return fetch(`http://localhost:3001/api/gyms/${gymId}`, {
+      method: 'PATCH',
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        gym: {
+          vote: state.vote
+        }
+      })
+    }).then(response  => {
+      return response.json()
+    }).then(responseJson => {
+      dispatch({type: 'VOTE_GYM', payload: responseJson})
     }).catch(e => {
       console.log(e)
     })

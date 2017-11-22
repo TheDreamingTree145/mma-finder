@@ -1,23 +1,26 @@
-import React from 'react';
+import React, {Component} from 'react';
 import { Link } from 'react-router-dom';
+import GymLi from './GymLi';
 
-const GymsList = (props) => {
-  function listGyms() {
-    return props.gyms.gyms.map(gym => {
-      return (
-        <div key={gym.id}>
-          <ul>
-            <Link style={{ marginRight: '12px' }} to={`/gyms/${gym.id}`}>{gym.name}</Link>
-          </ul>
-        </div>
-      )
-    })
+class GymsList extends Component {
+  constructor(props) {
+    super(props);
   }
-  return (
-    <div>
-      {listGyms()}
-    </div>
-  )
+
+  render() {
+    let self = this;
+
+    function listGyms() {
+      return self.props.gyms.gyms.map(gym => {
+        return <GymLi gym={gym} />
+      })
+    }
+    return (
+      <div>
+        {listGyms()}
+      </div>
+    )
+  }
 }
 
 export default GymsList;

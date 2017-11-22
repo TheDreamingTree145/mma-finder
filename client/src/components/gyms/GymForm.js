@@ -13,7 +13,8 @@ class GymForm extends Component {
       location: '',
       owner: '',
       description: '',
-      image_url: ''
+      image_url: '',
+      vote: 0
     }
   }
 

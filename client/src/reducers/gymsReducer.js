@@ -9,6 +9,9 @@ export default function gymsReducer(state = {loading: false, gyms: []}, action) 
     case 'UPDATE_GYM':
       const gym = action.payload.gym
       return {gyms: state.gyms.filter(gym => gym.id !== action.payload.gym.id).concat(gym)}
+    case 'VOTE_GYM':
+      const votedGym = action.payload.gym
+      return {gyms: state.gyms.filter(gym => gym.id !== action.payload.gym.id).concat(votedGym)}
     default:
       return state
   }
