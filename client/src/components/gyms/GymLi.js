@@ -31,8 +31,7 @@ class GymLi extends Component {
       <div key={gym.id}>
         <ul>
           <Link style={{ marginRight: '12px' }} to={`/gyms/${gym.id}`}>{gym.name}</Link>
-          <button onClick={this.handleOnClick}>Click Me</button>
-          <p>{this.state.vote}</p>
+          <button onClick={this.handleOnClick}>Click to Vote: {gym.vote}</button>
         </ul>
       </div>
     )

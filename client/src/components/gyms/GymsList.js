@@ -11,7 +11,9 @@ class GymsList extends Component {
     let self = this;
 
     function listGyms() {
-      return self.props.gyms.gyms.map(gym => {
+      return self.props.gyms.gyms.sort(function(a, b) {
+        return b.vote - a.vote;
+      }).map(gym => {
         return <GymLi gym={gym} />
       })
     }

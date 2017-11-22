@@ -70,7 +70,6 @@ export function updateGyms(state, gymId) {
 }
 
 export function voteGym(state, gymId) {
-  debugger;
   return function(dispatch) {
     dispatch({type: 'LOADING_GYMS'})
     return fetch(`http://localhost:3001/api/gyms/${gymId}`, {
