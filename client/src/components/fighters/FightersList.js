@@ -1,10 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const FightersList = (props) => {
+const FightersList = ({fighters, match}) => {
+
+  debugger;
 
   const fighterFunction = (weightClass) => {
-    return props.fighters.fighters.filter(fighter => {
+    return fighters.fighters.filter(fighter => {
       return fighter.weight_class === weightClass
     })
   }
@@ -13,7 +15,7 @@ const FightersList = (props) => {
     return (
       <div key={fighter.id}>
         <ul>
-          <Link style={{ marginRight: '12px' }} to={`/fighters/${fighter.id}`}>{fighter.name}</Link>
+          <Link style={{ marginRight: '12px' }} to={`${match.url}/${fighter.id}`}>{fighter.name}</Link>
         </ul>
       </div>
     )
