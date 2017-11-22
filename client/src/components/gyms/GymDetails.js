@@ -4,15 +4,6 @@ import GymFightersList from './GymFightersList';
 
 const GymDetails = ({gym, fighters}) => {
 
-  debugger;
-  const WrappedLink = () => {
-    return (
-      <button>
-        <Link style={{ marginBottom: '5px'}} to={`/gyms/${gym.id}/edit`}>Edit this Gym</Link>
-      </button>
-    )
-  }
-
   return (
     <div className="ui internally celled grid container">
       <div className="row">
@@ -28,7 +19,9 @@ const GymDetails = ({gym, fighters}) => {
           <img alt={gym.name} src={gym.image_url} />
         </div>
         <div>
-          <WrappedLink />
+          <button>
+            <Link style={{ marginBottom: '5px'}} to={`/gyms/${gym.id}/edit`}>Edit this Gym</Link>
+          </button>
         </div>
       </div>
       <div className="row">
