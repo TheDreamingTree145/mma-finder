@@ -3,39 +3,13 @@ import { Link } from 'react-router-dom';
 
 const FightersList = (props) => {
 
-  const flyweight = props.fighters.fighters.filter(fighter => {
-    return fighter.weight_class === "Flyweight"
-  })
+  const fighterFunction = (weightClass) => {
+    return props.fighters.fighters.filter(fighter => {
+      return fighter.weight_class === weightClass
+    })
+  }
 
-  const bantamweight = props.fighters.fighters.filter(fighter => {
-    return fighter.weight_class === "Bantamweight"
-  })
-
-  const featherweight = props.fighters.fighters.filter(fighter => {
-    return fighter.weight_class === "Featherweight"
-  })
-
-  const lightweight = props.fighters.fighters.filter(fighter => {
-    return fighter.weight_class === "Lightweight"
-  })
-
-  const welterweight = props.fighters.fighters.filter(fighter => {
-    return fighter.weight_class === "Welterweight"
-  })
-
-  const middleweight = props.fighters.fighters.filter(fighter => {
-    return fighter.weight_class === "Middleweight"
-  })
-
-  const lightHeavyweight = props.fighters.fighters.filter(fighter => {
-    return fighter.weight_class === "Light Heavyweight"
-  })
-
-  const heavyweight = props.fighters.fighters.filter(fighter => {
-    return fighter.weight_class === "Heavyweight"
-  })
-
-  const flyweightMap = flyweight.map(fighter => {
+  const fighterDivs = (fighter) => {
     return (
       <div key={fighter.id}>
         <ul>
@@ -43,114 +17,93 @@ const FightersList = (props) => {
         </ul>
       </div>
     )
-  })
+  }
 
-  const bantamweightMap = bantamweight.map(fighter => {
+  const flyweight = fighterFunction("Flyweight").map(fighter => {
     return (
-      <div key={fighter.id}>
-        <ul>
-          <Link style={{ marginRight: '12px' }} to={`/fighters/${fighter.id}`}>{fighter.name}</Link>
-        </ul>
-      </div>
+      fighterDivs(fighter)
     )
   })
 
-  const featherweightMap = featherweight.map(fighter => {
+  const bantamweight = fighterFunction("Bantamweight").map(fighter => {
     return (
-      <div key={fighter.id}>
-        <ul>
-          <Link style={{ marginRight: '12px' }} to={`/fighters/${fighter.id}`}>{fighter.name}</Link>
-        </ul>
-      </div>
+      fighterDivs(fighter)
     )
   })
 
-  const lightweightMap = lightweight.map(fighter => {
+  const featherweight = fighterFunction("Featherweight").map(fighter => {
     return (
-      <div key={fighter.id}>
-        <ul>
-          <Link style={{ marginRight: '12px' }} to={`/fighters/${fighter.id}`}>{fighter.name}</Link>
-        </ul>
-      </div>
+      fighterDivs(fighter)
     )
   })
 
-  const welterweightMap = welterweight.map(fighter => {
+  const lightweight = fighterFunction("Lightweight").map(fighter => {
     return (
-      <div key={fighter.id}>
-        <ul>
-          <Link style={{ marginRight: '12px' }} to={`/fighters/${fighter.id}`}>{fighter.name}</Link>
-        </ul>
-      </div>
+      fighterDivs(fighter)
     )
   })
 
-  const middleweightMap = middleweight.map(fighter => {
+  const welterweight = fighterFunction("Welterweight").map(fighter => {
     return (
-      <div key={fighter.id}>
-        <ul>
-          <Link style={{ marginRight: '12px' }} to={`/fighters/${fighter.id}`}>{fighter.name}</Link>
-        </ul>
-      </div>
+      fighterDivs(fighter)
     )
   })
 
-  const lightHeavyweightMap = lightHeavyweight.map(fighter => {
+  const middleweight = fighterFunction("Middleweight").map(fighter => {
     return (
-      <div key={fighter.id}>
-        <ul>
-          <Link style={{ marginRight: '12px' }} to={`/fighters/${fighter.id}`}>{fighter.name}</Link>
-        </ul>
-      </div>
+      fighterDivs(fighter)
     )
   })
 
-  const heavyweightMap = heavyweight.map(fighter => {
+  const lightHeavyweight = fighterFunction("Light Heavyweight").map(fighter => {
     return (
-      <div key={fighter.id}>
-        <ul>
-          <Link style={{ marginRight: '12px' }} to={`/fighters/${fighter.id}`}>{fighter.name}</Link>
-        </ul>
-      </div>
+      fighterDivs(fighter)
     )
   })
+
+  const heavyweight = fighterFunction("Heavyweight").map(fighter => {
+    return (
+      fighterDivs(fighter)
+    )
+  })
+
 
   return (
     <div className="ui grid container">
       <div className="row">
         <div className="four wide column">
           <h5>Flyweights</h5>
-          {flyweightMap}
+          {flyweight}
         </div>
         <div className="four wide column">
           <h5>Bantamweight</h5>
-          {bantamweightMap}
+          {bantamweight}
         </div>
         <div className="four wide column">
           <h5>Featherweights</h5>
-          {featherweightMap}
+          {featherweight}
         </div>
         <div className="four wide column">
           <h5>Lightweights</h5>
-          {lightweightMap}
+          {lightweight}
         </div>
     </div>
       <div className="row">
         <div className="four wide column">
           <h5>Welterweights</h5>
-          {welterweightMap}
+          {welterweight}
         </div>
         <div className="four wide column">
           <h5>Middleweights</h5>
-          {middleweightMap}
+          {middleweight}
         </div>
         <div className="four wide column">
           <h5>Light Heavyweights</h5>
-          {lightHeavyweightMap}
+          {lightHeavyweight}
         </div>
         <div className="four wide column">
           <h5>Heavyweights</h5>
-          {heavyweightMap}
+          {heavyweight}
         </div>
       </div>
     </div>
