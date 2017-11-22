@@ -2,12 +2,13 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 import GymFightersList from './GymFightersList';
 
-const GymDetails = (props) => {
+const GymDetails = ({gym, fighters}) => {
 
+  debugger;
   const WrappedLink = () => {
     return (
       <button>
-        <Link style={{ marginBottom: '5px'}} to={`/gyms/${props.gym.id}/edit`}>Edit this Gym</Link>
+        <Link style={{ marginBottom: '5px'}} to={`/gyms/${gym.id}/edit`}>Edit this Gym</Link>
       </button>
     )
   }
@@ -16,15 +17,15 @@ const GymDetails = (props) => {
     <div className="ui internally celled grid container">
       <div className="row">
         <div className="four wide column">
-          <h1>{props.gym.name}</h1>
-          <strong>Location: {props.gym.location}</strong><br />
-          <strong>Owner: {props.gym.owner}</strong><br />
+          <h1>{gym.name}</h1>
+          <strong>Location: {gym.location}</strong><br />
+          <strong>Owner: {gym.owner}</strong><br />
         </div>
         <div className="six wide column">
-          <p>{props.gym.description}</p>
+          <p>{gym.description}</p>
         </div>
         <div className="four wide column">
-          <img alt={props.gym.name} src={props.gym.image_url} />
+          <img alt={gym.name} src={gym.image_url} />
         </div>
         <div>
           <WrappedLink />
@@ -33,7 +34,7 @@ const GymDetails = (props) => {
       <div className="row">
         <div className="eight wide column">
           <h5>Fighters Who Train Here</h5>
-          <GymFightersList fighters={props.fighters} gym={props.gym}/>
+          <GymFightersList fighters={fighters} gym={gym}/>
         </div>
       </div>
     </div>
