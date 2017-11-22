@@ -3,8 +3,6 @@ import { Link } from 'react-router-dom';
 
 const FightersList = ({fighters, match}) => {
 
-  debugger;
-
   const fighterFunction = (weightClass) => {
     return fighters.fighters.filter(fighter => {
       return fighter.weight_class === weightClass
